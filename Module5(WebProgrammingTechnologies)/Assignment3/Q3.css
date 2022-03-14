@@ -1,0 +1,18 @@
+<!--Use of ExternalCss-which is used by making different CSS file-->
+body{
+    background-color:yellow; 
+    color:red;
+}
+h1{
+    font-family:sans-serif;
+    text-align:center;
+}
+p{
+    color:green;
+}
+table{
+    height:100px;
+    width: 200px;
+    color: blue;
+    background-color: aquamarine;
+}

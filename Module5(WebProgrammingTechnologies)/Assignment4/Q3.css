@@ -1,0 +1,80 @@
+.container
+{
+    background-color: rgb(102, 175, 28);
+    height: 100vh;/* vh ->viewport height */
+	width: 100vw;/* vw -> viewport width */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content{
+    height: 40vh;
+	width: 25vw;
+    background-color: honeydew;
+    padding-bottom: 2%;
+	
+}
+
+.sub_content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name_box
+{
+    margin: 20px;
+    margin-top: 40px;
+}
+
+.pass_box
+{
+    margin: 20px;
+}
+
+.login_box
+{
+    height: 3rem;
+    width: 19rem;
+    font-size: larger;
+    background-color: green;
+    border: 0px;
+    color: white;
+    /* border-radius: 6px; */
+    
+
+}
+
+button
+{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 10px;
+    margin-left: 7rem;
+    font-size: larger;
+    background-color: green;
+    border-color: green;
+    color: honeydew;
+    font-family: monospace; 
+    border: 0px;   
+}
+
+
+input {
+    height: 3rem;
+    width: 19rem;
+    border: 2px solid grey;
+    /* border-radius: 6px; */
+    font-size: large;
+}
+.create_box
+{
+    margin: 20px;
+    margin-left: 75px;
+    margin-bottom: 40px;
+}
+
+

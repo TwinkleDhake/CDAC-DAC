@@ -1,0 +1,28 @@
+#container{
+	border: 1px solid black;
+	display: flex; /*Applying flex*/
+	flex-direction: row; /*setting the direction of flex*/
+	flex-wrap: wrap;	
+	/*justify-content: flex-start;*/
+	/*align-items: center;*/
+	/*align-content: flex-start		;*/
+	height: 400px;
+	width: 800px;
+	/*gap: 50px;*/
+	row-gap: 30px;
+	column-gap: 20px;
+}
+
+.block{
+	border: 2px solid red;
+	margin: 10px;
+	padding: 5px;
+	width: 100px;
+	height: 100px;
+	/*align-self: center ;*/
+	/*flex-grow: 1	;*/
+}
+
+.block_grow{
+			flex-grow: 1;
+}
