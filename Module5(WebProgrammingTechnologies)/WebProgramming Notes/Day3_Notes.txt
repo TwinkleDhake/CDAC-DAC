@@ -1,0 +1,136 @@
+HTML Topics:
+Text level tags
+List,Misc tags
+Tables
+Forms,Hyperlinks
+Multimedia support
+Sematic Tags
+CSS,
+JS
+Events,Canvas,Geolocation
+Drag and drop
+Jquery
+Bootstrap
+Nodejs(javascript file handling basic of async programming,modules)
+HTTP protocol
+Server(HTTP server, express,database)
+local storage
+React
+web socket
+MERN stack>Mongo express react nodejs
+
+Iframes:
+IFRAME -> (attr: src="PATH_TO_HTML_PAGE" height="100" width="200" title="TITLE")
+
+
+HTML Specification:
+https://html.spec.whatwg.org/#abstract
+
+HTML5:
+HTMl5 new standard for mordern web tech
+Features:
+->HTML validation and form level validation
+->Multimedia support
+->Geolocation support
+->Canvas
+->Extra tags to show multiple information(default rendering)
+->Extra tags for layout/semantic design
+->Microdata
+->Lot of events
+->Drag and drop
+->Websocket
+->Local storage
+
+
+  
+Multimedia:
+Audio:
+AUDIO ->(attr: controls,autoplay,autobuffer,loop,preload) tag to embed audio
+SOURCE -> embed audio
+
+VIDEO ->(attr: height=200 width=200  controls,autoplay,autobuffer,loop,poster,preload) tag to embed video
+SOURCE -> embed video
+
+
+Microdata:
+-> How brwoser render the page
+-> consist of group of key-value pairs 
+->groups are items
+->key-value are properties
+(attr: itemtype,itemscope,itemprop,itemid,itemref)
+How to create item?
+Use itemscope attribute
+
+How to create property?
+Use itemprop attrbute
+
+ARIA accessbility:
+(Accessbile rich internet applications)
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+role = alert|error|application|article|banner|button|checkbox|combobox|complementry|definition|dialog
+_________________________________________________________________________________________________________________________
+CSS(Cascade Style sheet)
+->Style the page
+->Its not programming language
+Three types of writing CSS:
+1.Inline CSS: write css with the html tag using style attribute
+2.Internal CSS: write css inside style tag
+3.External CSS: write css inside seperate file.And link using link tag
+
+Property:It is the styling property such as border,color,font
+Value :it is the value of property
+Selector : Way of selecting tag
+
+->Inline Structure
+style="property:value;property:value"
+->Internal CSS and External CSS Stucture:
+selector {
+    property:value;
+    property:value;
+}
+CSS property list:
+background-color -> set backbround color
+color -> set text color
+height -> set height of block
+width -> set width of block
+text-align -> set the alignment of text
+border -> set the border
+background-image -> set backround image
+margin -> set margin 
+padding -> set padding    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

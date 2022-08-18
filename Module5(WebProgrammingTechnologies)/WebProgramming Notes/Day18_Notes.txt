@@ -1,0 +1,109 @@
+Jquery Cheatsheet:
+https://oscarotero.com/jquery/
+
+Bootstrap:
+->CSS library
+->design the page
+->For some functionalities uses jquery
+->Responsive design
+Cheat Sheet
+https://bootstrap-cheatsheet.themeselection.com/
+https://getbootstrap.com/docs/5.1/examples/cheatsheet/
+How to use?
+Two Ways:
+1.Download and import
+2.Use CDN link
+
+->Bootstrap divides page into 12 columns
+->Decides the size components by column
+Breakpoints
+sm -> mobile/smartphones
+md -> tablet
+lg ->large screen
+xl -> larger screen
+xxl -> extra large screen
+
+Container:
+->container does not occupy whole page
+->container-fluid occupy whole page width
+
+->Create row class div to contain column
+->Use col-breakpoint-size property to adjust the column size
+e,g col-4, col-6 -> these propety will work on all screen size
+col-lg-4 -> for only large screen
+col-sm-6 -> for only small screen
+_________________________________________________________________
+React:
+->It is front end framework
+->Design Single Page Application
+
+npx ->Install the package
+
+Installation:
+->Open cmd
+->Run npx create-react-app your_react_app
+->Open your_react_app folder in vs code or any IDE
+
+File structure:
+node_modules -> Contains library
+public ->Images or media
+src -> contains source code (work in this folder)
+package-lock.json -> Contains library list
+package.json -> Contains configuration and dependency
+
+
+Program execution flow:
+public/index.html ->src/index.js -> src/App.js(work here) ->create your files here in src
+
+Run React app:
+npm start
+-> It automatically restart the app
+
+Components:
+->React follows compnent based architecture
+->Component is a independent part/block of page which contains it own HTML,CSS,JS
+
+Component Syntax:
+function ComponentName(){
+    return(
+        <div>
+        </div>    
+    )
+}
+export default ComponentName
+
+->We write JSX(Javascript XML) in return()
+->We must not write adjacent Tags
+->Component must start with upper case
+->Componment must be exported
+->Component name is file name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

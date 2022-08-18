@@ -1,0 +1,3 @@
+AJAX:
+->use responseText property to get JSON data
+->use responseXML property to get XML data

@@ -1,0 +1,188 @@
+Javascript:
+Variables:
+->Declare variables using "var","let","const" keyword
+var ->variable declared by using var can be accessed in same namespace
+let -> access inside block
+const -> cannot change the value
+->No need to mention datatypes 
+e.g
+var a; // declartion of variable
+var b="sid" // declaration and initialization of varaible
+b=20.6 //assigning float
+b=10 // assining integer
+b=true // assining boolean
+
+
+-> To print on page use document.write("string")
+->To print on console use console.log(object)
+Naming rules:
+->variable name must start with only letters and $ and _
+->variable name cannot be keywords
+->variable can have letters,digits, $ and _
+
+Operators:
++,-,*,/,%,++,--,**(exponent)
+
+String:
+length ->(property) Get the length of string
+split("seperator") -> split the string and return array
+toLowerCase() ->Convert string to lowercase
+toUpperCase() ->Convert string to upper case
+substring(startindex,endindex) ->get the string based on index
+charAt(index) ->get character at index
+concat() -> join two string
+includes("substring") ->check substring is present in string or not
+match("pattern")->matches pattern in string
+replace(pattern,newsubstring) ->replace string with matching pattern
+search("pattern") ->check substring is present in string or not
+indexOf("string")->return the index fof first of occurance of string
+startsWith(substring) ->check string start with  substring or not
+Syntax:
+string_variable.function(argument)
+string_variable.property
+
+String Concat:
+str1 + str2
+e.g.
+var str="Siddhant"
+
+
+Arrays:
+Arrays is the list of values
+Syntax: 
+var arr = [10,20,"sid",10.4,false]
+Property List:
+length -> get the length of array
+Function List:
+concat(array) -> join two arrays
+find(test_function) ->return element after passing test function
+includes(element) -> check element is presnt in array or not
+push(element)  -> insert into array at the end
+pop() -> removes the last element from array
+sort(function) -> sort the array based on function by default by alphabet
+shift(element) -> removes from the begning
+join(delimieter)-> joins element of arrays
+
+
+
+
+Conditional Operator:
+<,>,<=,>=,==,===(strict match),!=,
+
+JS Control Syntax:
+->Expressions is false if it is null,undefined,false,0,'0',''
+IF Statements:
+if(expression){
+    statement
+}
+
+IF-ELSE:
+if(expression){
+    statements
+}else{
+    statements
+}
+
+
+IF-ELSE-IF:
+if(expressions){
+    statements
+}else if(expressions){
+
+}
+else{
+    statements
+}
+
+Switch Statements:
+switch(expressions){
+    case compare_word : statements
+                        break;
+
+    case compare_word : statements
+                        break;
+
+    case compare_word : statements
+                        break;
+
+    default: statements
+}
+
+Type Casting:
+->Javascript does implict typecasting
+->If a number interact with string the datatype of number will be strng
+->If you want explicit typecasting:
+Use functions:
+parseInt() -> convert to interger
+parseFloat() -> convert to float
+toString() -> convert to string
+
+
+Alert and Prompt:
+alert -> It is used to show information in dialog box
+alert(string);
+prompt -> its is used to take input from dialog box
+var data = prompt(string)
+
+
+Loops:
+WHILE:
+while (expression){
+}
+
+DO-WHILE:
+do{
+
+}while(expression)
+
+
+FOR:
+for(intialization;condition;increment/decrement){
+}
+
+__________________________________________________________________________
+
+Functions:
+Syntax:
+function function_name(arguments){
+}
+
+
+
+____________________________________________________________________
+Events:
+Every action on page fires an event
+Click
+Focus
+Blur
+Focusout
+mouseover
+mouseenter
+mouseleave
+keypress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

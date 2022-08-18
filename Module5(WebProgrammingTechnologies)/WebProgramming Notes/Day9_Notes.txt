@@ -1,0 +1,233 @@
+Regular expressions:
+^ -> line starting with
+$ -> line ending with
+. -> any character
++ -> one or  more occurance
+* -> zero or more occurance
+{} -> exact occurance
+() -> grouping
+| -> or
+[] -> range
+_______________________________________________________________
+NaN -> Not a number
+null -> when any variable is not pointing to anything we assign it to null(In case of objects or functions)
+undefined ->When a variable is just declared or nothing assigined the value of variable is undefines
+"" -> If we are going to assigin string later or type of variable should be string then assign this
+
+_______________________________________________________________
+Objects:
+var student = {
+	name: "Siddhant",
+	branch : "CS",
+	email : "sid0308v@gmail.com",
+	phone : 39288973,
+	gender : "Male"
+}
+ 
+//iteration through object
+str = ""
+for (let key in student){ 
+	str += (key + ":" + student[key]+"<br>")
+}
+document.getElementById("object_iter").innerHTML = str;
+
+____________________________________________________________________
+var arr = [
+{name: "Siddhant",branch : "CS",email : "sid0308v@gmail.com",}, //0
+{name: "Anubhav", branch : "EC", email : "sid0308v"}, //1
+{name: "rajat", branch : "EC",email : "sid"}, //2
+{name: "neha", branch : "EC",email : "sid0308v"}, //3
+]
+str = "<table border=1>"
+for (var element of arr){
+	str += "<tr><td>"+element.name+"</td><td>"+element.branch+"</td></tr>"
+}
+str += "</table>"
+document.getElementById("array_iter").innerHTML = str;
+_______________________________________________________________________
+Namespace:
+jvar calc = {
+	sum : function(a,b){
+		return a + b
+	}
+	sub : function(a,b){
+		return a - b
+	}
+}
+
+Here object is creating namespace.means you cannot access its identifier outside directly
+Global Namespace of page is window object
+Purpose:
+Modular Code
+Seperation of identifiers
+______________________________________________________________________
+this keyword:
+->Every namespace creates a scope and functions creates scope
+->Use this inside namspace or function to access outside idenifiers
+->this keyword points the owner object
+_________________________________________________________________________
+New keyword:
+function Stud(){ // Stud is now acting as a construtor
+	this.name = "Siddhant";
+	this.branch = "CS";
+	this.email ="sid0308v@gmail.com";
+	this.phone = 39288973;
+	this.gender = "Male";
+	this.get_grade = function(){
+		return "A"
+	}
+}
+
+//var obj = new student()//student is not a constructor
+var s1 = new Stud();
+var s2 = new Stud();
+var s3 = new Stud();
+
+//Parameterized
+function Student(name,branch,email,phone){ // Stud is now acting as a construtor
+	this.name = name
+	this.branch = branch
+	this.email = email
+	this.phone = phone
+	this.gender = "Male";
+	this.get_grade = function(){
+		return "A"
+	}
+}
+
+var s4 = new Student("Sid","CS","sid0308v","389247298")
+
+
+_________________________________________________________________________________________________
+Create Object using Object.create()
+//Create Instance of student object using Object.create()
+var student = {//Object literal
+	name: "Siddhant",
+	branch : "CS",
+	email : "sid0308v@gmail.com",
+	phone : 39288973,
+	gender : "Male"
+}
+
+var st1 = Object.create(student)
+var st2 = Object.create(student)
+var st3 = Object.create(student)
+__________________________________________________________________________________
+Create Object using class(ES6 standard):
+class Employee {
+	constructor(id,name,salary){
+		this.id = id;
+		this.name = name;
+		this.salary = salary
+		this.get_tax = function(){
+			return 0.10 * this.salary
+		}
+	}
+}
+
+var e1 = new Employee(1,"sid",3000);
+->Here constructor name is constructor
+->create object using new keyword
+___________________________________________________________________________
+Notes about Object Creation:
+->There are three methods to create objects
+1.Use new keyword
+2.Use Object.create
+3.Use class Syntax
+->you can also create object by yourself as object literal
+->You can add new member/key into object after creation by any ways
+_________________________________________________________________________________
+Prototypes:
+->Its a mechanism in JS to inherit the property of other objects
+->By default "Object" is prototype of all objects
+var Emp = function(id,name){
+	this.id = id
+	this.name = name
+}
+
+Emp.prototype.toString = function() {
+	return "ID :"+ this.id +" Name: "+this.name;
+};
+Emp.prototype.valueOf = function(){
+	return this.id
+}
+
+var e = new Emp(1,"Siddhant")
+
+->Get prototype of any object
+Object.getPrototypeOf(e)
+->Set prototype of any object
+Object.setPrototypeOf(e,Employee)
+_________________________________________________________________________________________
+Encapsulation:
+->Binding data and methods
+->Implemented in namespace,Objects,Functions,Class
+______________________________________________________________________________________
+Inheritance:
+(ES6 Standard)
+->when defining function inside class dont use function keyword and dont use arrow key function
+
+//Using class(ES6 standard)
+class Employee {
+	constructor(id,name,salary){
+		this.id = id;
+		this.name = name;
+		this.salary = salary
+	}
+	get_tax(){
+			return 0.10 * this.salary
+	}
+}
+
+//Inheritance(Using ES6)
+//Using class Syntax:
+//Here extends keyword is used for inheritance
+//here staff is inheriting Employee class
+ class Staff extends Employee{
+ 	constructor(id,name,dept,days,salary){
+ 		super(id,name,salary) //calling parent constructor to create object
+ 			this.dept = dept
+ 			this.days = days
+
+ 	}
+ 	get_total_salary(){
+ 		return this.salary - super.get_tax()
+ 	}
+ 	calculate_hrs(){ // here when defining function dont use function keyword and dont use arrow key function
+
+		return parseInt(this.days) * 8 		
+ 	}
+ 	get_tax(){ //Method overriding It is polymorphism
+ 		return this.salary * 0.20
+ 	}
+ }
+
+var stff = new Staff(1,"Anubhav","Development",20,4000)
+console.log(stff.get_total_salary())
+console.log(stff.calculate_hrs())
+console.log(stff.get_tax())
+//_______________________________________________________
+
+Polymorphism:
+In above we are overriding super class get_tax function
+______________________________________________________________
+Date:
+Create Date Object
+var d = new Date() // current date and time
+d.getDay() ->Get day of the week
+d.getFullYear() -> get the year
+d.getMonth() ->get month
+d.getTime() ->Get miliseconds
+
+
+How to create a date by given date?
+var d = new Date(milliseconds) // Create date by miliseconds
+var d = new Date(year,month,day,hours,minutes,seconds,milliseconds)
+->Month starts from 0
+___________________________________________________________________________________________________
+Map and filter:
+
+
+
+
+

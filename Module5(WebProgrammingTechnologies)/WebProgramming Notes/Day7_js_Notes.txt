@@ -1,0 +1,103 @@
+Object:
+->In js everything is object.
+->Here object is key value pair
+->Rules of varibles mus be followed for key names
+Syntax:
+var obj = {
+key : value,
+ley : value
+}
+
+var student = { //creating object here
+	name: "Siddhant",
+	prn : 1,
+	course : "PG-DAC"
+}
+
+document.write(student)
+document.write("<br>")
+document.write(student.prn+"<br>");
+document.write(student.name+"<br>"); // Accessing name member/key using dot operator
+document.write(student["name"]+"<br>"); // Accessing name member/key using subscript
+//Assign value to member/key of object
+student.name = "sid"
+student["prn"] = 2
+document.write("<hr>")
+document.write(student.prn+"<br>");
+document.write(student.name+"<br>"); // Accessing name member/key using dot operator
+
+document.write("<hr>")
+student.phone = "2428934789"; // Adding new key to the object
+student["email"] = "sid0308v@gmail.com" // Adding new key to object
+document.write(student.phone+"<br>");
+document.write(student.email+"<br>"); // Accessing name member/key using dot operator
+
+
+Note:
+Generally we use . to access key object.
+We can have anyobject inside object
+
+Number Functions:
+Convert Number to string:
+number.toString();
+Convert String to number:
+parseInt()
+
+Comparisons:
+10 == 10.0 // true
+10 === 10.0 // true
+10 == 10.03 //false
+10 == '10' //true
+10 === '10' //false
+NaN -> not a number
+isNaN(value) -> this function is used to check wether value is number or not. If its number returns false else true
+Infinite -> This keyword Reprsents Infinite
+Typcasting using Number()
+Number("78234672") -> convert to number
+
+Math Library functions:
+Math.random()
+0.2391380695091696
+Math.PI
+3.141592653589793
+Math.E
+2.718281828459045
+Math.LN2
+0.6931471805599453
+Math.sqrt(10)
+3.1622776601683795
+Math.SQRT1_2
+0.7071067811865476
+Math.pow(2,3)
+
+____________________________________________________________________________________________________________
+Internal Script:Write js code in script inside html file
+External Script:Write js code in external js file and importing in HTML
+
+
+_____________________________________________________________________________________________________________
+Scopes:
+Three types of scopes:
+->Block scope
+{
+    //Block Scope
+}
+
+->Function scope
+function name(){
+//function scope
+}
+
+->Global Scope
+Anywhere in js
+
+
+->When variable go out of scope js destroys the variable
+->let variable cannot be redeclared but var can be redeclared
+->const have same scope as let
+-> var considers is function scope
+-> let considers function and block
+__________________________________________________________________________________________________________________
+
+
+

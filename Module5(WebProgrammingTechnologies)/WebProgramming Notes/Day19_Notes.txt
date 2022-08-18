@@ -1,0 +1,73 @@
+React:
+Program execution flow:
+public/index.html ->src/index.js -> src/App.js
+Component:
+->Independent block of the page which have its own JS,HTML,CSS
+
+
+How to Use CSS?
+->Create CSS file
+->Import CSS file
+import 'Path_of_CSS file'
+->Here use className instead of class
+
+Importing bootstrap here:
+->Copy boostrap library folder in public
+->Add link and script tag to import bootstrap inside head tag
+
+JSX:
+->Strict rules
+->Must close the Tags
+->Must have one root/starting tag
+->We can write JS code inside {code here} in JSX
+->The JS code inside {} must evaluate to something/return something
+->If you are passing JS varible or function you must in {}
+
+
+States:
+Example:
+a = 10
+a = 12 //Here "a" got new state or we change state of "a"
+->Variable changes the frontend/UI/ComponentUI is state
+->We need a method/function to change the state means change the variable(Because after changing state we have to change/re-render UI)
+->Always create state using useState
+->State is always inside and only part of that component
+
+//state syntax:
+//var [variableName , functionName] = useState(default_value_of_variable)
+
+-> functionName must start with "set"
+
+name=""
+name="Siddhant"
+setName("Sid")
+
+______________________________________________________________________
+Notes for input box:
+->when register handler function on some event that event will pass event to the function 
+->we can access the "name" attribute of tags using "target" attribute of event
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

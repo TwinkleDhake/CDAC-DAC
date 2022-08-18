@@ -1,0 +1,122 @@
+JSON:(Javascript Object Notation):
+Docs: https://www.json.org/json-en.html
+->Data exchange Format
+->Its Text format
+->Its easy
+->Key-Value Pair
+->Collection of key-Value Pair
+Format:
+{
+    "id":1,
+    "name":"Siddhant",
+    "email":"sid@gmail.com",
+    "marks":10.23,
+    "boolean":true,
+    "data":null,
+    "contact":{
+        "phone":"347824789247"    
+    },
+    "desc":"I am j jhfh \"jksdhfkj\" jhfs"
+
+}
+ 
+[ "Siddhant","data"]
+[{"id":1,"name":"siddhant},{"id":2,"name":"anubhav"}]
+{
+    "name":"siddhant",
+    "hobbies":["reading","studying"]
+
+}
+->Use JSON.stringify(object) to create JSON from object
+->Use JSON.parse(object) to create Object from JSON
+_____________________________________________________________
+Ajax:
+->Asynchronous Javascript and XML
+->It's a mechnaism of communication with server
+->Uses XMLHttpRequest Object in browser JS
+->It is part of browser JS
+->It can request server and fetch response without reloading the page
+
+
+->browser will call onreadystatechange function 5 times for each change of state
+//0 -> Request is not initialized yet
+//1 -> Established server connection 
+//2 -> server recieved the request
+//3 -> processing request
+//4 -> prcessing done now got response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________________________________________
+HTTP(Hypertext transfer protocol):
+->This is protocol
+->This follows request response model
+->This is application layer protocol
+->RFC 2616(It is the standard of HTTP protocol)
+->Its a stateless protocol
+URL format:
+https://www.google.com/
+http://www.google.com/
+->Here https means it got encryption layer means SSL/TLS layer.In other words data is encrypted in request response
+->http means no encryption. In other words if anyone able to capture the http request/response packet they can see the data
+protocol://domain_name/resources?querystring
+e.g:
+https://www.google.com/search?q=moz+docs
+https -> protcol
+www.google.com -> domain name
+search -> resource
+q=moz+docs -> querystring
+
+
+->Request/response packet consist of headers and payload/body
+->Request/response Header contains metadata of packet means details of packet like URL,type of request, type of data,sender etc
+
+->First esatablish connection
+->configure options(optional)
+->send request
+
+-> It got multiple types of request(Their puspose is different and packaging data is differnt)
+-->GET : send data with url(with querystring): Get data from server
+-->POST : send data with request body : Send data to server
+-->PUT : send data with request body : Update the data on server
+-->PATCH:  send data with request body : Update the data on server
+-->DELETE : send data with url : Delete data on server
+-->HEAD : send data with url without response body
+-->OPTIONS:it sends communication options
+-->TRACE:its for  loop back testing
+-->CONNECT: It establish a connection
+
+
+Status Codes:
+1xx Series -> Informational
+2xx Series ->Successful request
+3xx Series -> Redirection 
+4xx Series -> Not able to access resource
+5xx Series -> Servere internal issue
+
+200 -> OK
+400 -> Bad request
+401 -> Unauthorized
+404 -> Resource not found
+500 -> Internal server error
+
+
+HTTP 1.0,1,1
+HTTP 2.0 -> Web socket support
+_________________________________________________________________
+
+
+

@@ -1,0 +1,23 @@
+Asynchronous Programming:
+-Parallel execution
+->Its not thread
+
+Asynchronous fs:
+fs.writeFile("demo.txt",data,function(){
+    console.log("success")
+    fs.readFile("demo.txt",function(err,x){
+        if(!err){
+            console.log("Data of file:")
+            console.log(x.toString())
+        }else{
+            console.log(err)
+        }
+    })
+    console.log("XYZ")
+
+})
+__________________________________________________________________
+HTTP Server:
+localhost -> domain name of your own pc(Testing and development0)
+127.0.0.1 -> ip address of localhost(loopback address)
+

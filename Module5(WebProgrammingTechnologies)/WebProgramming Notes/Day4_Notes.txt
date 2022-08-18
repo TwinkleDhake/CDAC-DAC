@@ -1,0 +1,61 @@
+CSS:
+Comment
+/* comment here */
+Selection of Tag:
+->By using attribute id and class
+->ID attribute is used to identify single tag on the page
+#id_selector{
+    property:value;
+}
+->CLASS attribute is used to identify multiple tag on the page.
+.class_selector{
+    property:value;
+}
+
+Flex:
+How to set flex?
+use display property 
+refer flex_demo_style.css
+refer flex_demo_style.html
+->Apply flex on Main block
+display:flex
+->After applying flex We can use flex properties
+flex_direction:row|column|row-reverse|column-reverse -> change the direction of inside blocks on main block
+flex-wrap:wrap|nowrap ->wrap the block or not on changing width
+justify-content:flex-start|flex-end|space-evenly|space-around|space-between
+align-items:flex-start|flex-end|center -> apply on main block
+align-self:flex-start|flex-end|center -> apply on inside block
+align-content:flex-start|flex-end|space-evenly|space-around|space-between
+flex-grow:1
+gap:10px 
+
+Mesurement Unit:
+Absolute:
+px
+Relative:
+vw->viewport width
+vh->viewport height
+% ->percent of parent block/element
+rem ->relative to font size of main element
+em ->relative to font size(times of current font size)
+ch -> relative to width of the 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

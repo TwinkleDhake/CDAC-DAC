@@ -1,0 +1,107 @@
+Colors:
+->By name
+background-color:green
+
+->In hex form
+background-color:#2345AF
+->In rgb form
+background-color: rgb(100,230,200)
+Max value-255 Min value=0
+->In rgba form
+background-color: rgba(100,230,200,0.5)
+Max value of alpha is 1 and min value is 0
+
+Image value:
+url("PATH TO IMAGE")
+e.g
+background-image:url("PATH TO IMAGE");
+
+
+Selector:
+How to write selector?
+->For Tag:
+tagname{
+}
+
+->For ID
+#id_name{
+}
+
+->for class
+.class_name{
+}
+
+->For events
+tagname:event{
+}
+#id_name:event{
+}
+.class_name:event{
+}
+
+
+->For all tag selection
+*{
+}
+
+->For selecting a class inside a tag
+tagname.class_name{
+}
+->Selecting multiple tags
+tagname,tagname{
+}
+
+->Selected tag inside a tag
+outer_tag inner_tag{
+}
+
+->Select based on attribute
+tagname[attribute=value]{
+}
+
+->Select nth tag
+tag_name:nth-child(NO_OF_TAG){
+}
+->Select Last Tag
+tag_name:nth-last-child(COUNT FROM LAST)
+
+->Select First letter
+p::first-letter{}
+->select First line
+p::first-line{}
+tagname::before{
+}
+tagname::after{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Choose Color :
+https://material.io/resources/color/

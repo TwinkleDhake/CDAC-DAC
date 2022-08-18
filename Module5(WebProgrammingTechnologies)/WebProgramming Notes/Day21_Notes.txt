@@ -1,0 +1,69 @@
+-> Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+Redux:
+->It a tool or library
+->For managing data and states
+Install:
+npm install react-redux
+https://react-redux.js.org/introduction/getting-started
+Steps:
+1.Create a Redux store
+2.Subscribe to updates
+3.Inside the subscription callback:
+->Get the current store state
+->Extract the data needed by this piece of UI
+->Update the UI with the data
+4.If necessary, render the UI with initial state
+5.Respond to UI inputs by dispatching Redux action
+->A UI binding library like React Redux handles the store interaction logic, so you don't have to write that code yourself.
+________________________________________________________________
+Actions:
+->Simple object with type and payload key
+->When dispacting we have to dispatch to tell the store what to do with the updates
+
+Reducers:
+->How to update the state in store on that action
+
+1.Write Providers in index.js
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+2.Create Actions when dispatching
+store.dispatch({
+					type : "ADD_MOVIE",
+					payload : name
+			})
+->Keys are fixed you must use type and payload keys
+->type is type of action and must  be string
+->payload contains the data
+
+->Create Reducers: Define what to do on actions means what changes we should apply on states
+
+3.Create Store and pass the reducer
+
+4.Connect the subscriber
+->Create a function to map the state returned by reducer to the props in the component where you want access data
+5.Export it using connect function
+->Connect function will coonnect the mapping function of state to props to components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

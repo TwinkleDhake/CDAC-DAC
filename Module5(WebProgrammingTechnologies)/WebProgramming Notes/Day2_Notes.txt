@@ -1,0 +1,87 @@
+Tags:
+List Tags: 
+OL->(attr: type="1|a|A|i" start=5)Ordered List
+UL->(attr: type="square|disc|circle")Unordered List
+LI ->List element
+
+Table Tag:(here we can pass height and width attribute with table,tr,td,th)
+TABLE ->(attr: border=2 bgcolor="red")
+TR -> (attr: bgcolor="red") Table row
+TD ->(attr : bgcolor="red" align="left|right|center") table element
+TH ->(attr : bgcolor="red") table Heading element
+TBODY -> Table body
+THEAD -> table head
+
+Image Tag:
+IMG -> (attr: src="PATH_TO_IMAGE" height=100 width=100)Image tag.Don't close this tag.code
+
+Forms Tag:
+For User Interaction(Purpose: Submit data to server and also provides the validation)
+FORM ->(attr: action="PATH_TO_SERVER" method="TYPE_OF_REQUEST")
+
+Input Tag:
+INPUT ->(attr: type="text|password|button|checkbox|date|file|radio|submit|tel|url|email|number|reset|range|image"
+    value="USER_DEFINED" name="NAME_OF_INPUT_DATA"  placeholder="PLACEHOLDER OF INPUT TAG"
+)Dont close input tag
+Attributes:
+width=100:width in pixel(For type image)
+height=100:height in pixel(For type image)
+maxlength=10: maximum no of character
+required:compulsary(Don't use on radio and checkbox)
+readonly:Read only input
+multiple: select multiple files(for type file)
+checked: default selection
+autocomplete="on|off": for autocomplete feature
+disabled:disable the input
+
+TEXTAREA ->(attr:rows=10 cols=30) this tag creates textarea for multiline input
+
+DropDown List:
+SELECT -> Creates dropdown list
+OPTION -> Dropdownlist item
+
+
+Fieldset Tag:
+FIELDSET -> create a boudary or a field
+LEGEND -> name of fieldset
+
+Hyperlinks/Anchor tag:
+A -> (attr: href="Link_to_we_page")Linking to other pages
+
+
+
+
+
+Meta Tag:
+Metadata of HTML page
+(attr:charset="utf-8" name="NAME_OF_KEY" content="VALUE OF KEY")
+e.g.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Sid">
+<meta name="description" content="This is description">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,61 @@
+HTML(Hyper text markup language) :
+->It a language(Not programming language)(Because we parse it we dont execute it)
+->It follows special Syntax(Tags/Markup)
+->Its case-insenstive
+
+Tag Rules :
+->Write tag inside angular bracket(< >)
+e.g:<title>
+->All the tag must be closed(Few execptions are there)
+e,g:</title>
+
+Attributes: Properties of tag
+
+Tag List :
+HTML -> HTML document start and ends with this tag
+HEAD -> Information/config of web page/document
+TITLE -> Page title(Inside head tag)
+BODY -> page content(bgcolor)
+P -> For paragraph
+CENTER -> Put content in center
+HR -> horizontal line(No need to close)
+BR -> Line break(No need to close)
+B -> bold
+I -> Italic
+U -> Underline
+Strong -> Strong string
+pre -> Show as it is writter in code
+
+Heading Tags:
+H1,h2,h3,h4,h5,h6 -> H1 is the largest heading and h6 is the smallest heading
+
+List Tags:
+Orderd List: List with numeric/aplhabetical values
+OL -> Tag for orderd list
+Unorderd List:List with bullets
+UL -> tag for unordered list
+LI -> For list iterms
+
+
+Table Tags:(Use this where you want rigid structure)
+TABLE -> Create table(attribute: border)
+TR -> Create row
+TD -> Table element
+THEAD -> For table head 
+TBODY -> For table body
+th -> Table head element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

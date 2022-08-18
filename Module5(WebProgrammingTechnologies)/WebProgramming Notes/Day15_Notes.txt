@@ -1,0 +1,15 @@
+HTTP Server:
+->Use http module
+
+Path:
+http://localhost:8080
+Resource/EndPoint Path : /
+
+
+http://localhost:8080/form.html
+Resource/EndPoint Path : /form.html
+
+http://localhost:8080/data
+Resource/EndPoint Path : /data
+
+

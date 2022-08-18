@@ -1,0 +1,75 @@
+Nodejs :
+Download Windows file:
+https://nodejs.org/dist/v16.13.1/node-v16.13.1-x86.msi
+Download other versions:
+https://nodejs.org/en/download/
+__________________________________________________________
+->It is free
+->It is JS on PC or backend
+->Runs on Chrome's V8 JS engine
+->Open source
+->Asynchrnous programming
+->Interpreted language
+->Extension of the file must be .js
+________________________________________________________
+Execute Code:
+node filename
+
+___________________________________________________________
+Print on the console:
+console.log(string)
+_________________________________________________________
+Modules:
+->Create function in module
+->Use exports.functionname to create function and to allow access outside of this module
+exports.sum = function(a,b){
+    return a + b   
+}
+
+->For exporting object use module.exports:
+var student = {
+	name : "Siddhant",
+	email : "sid0308v@gmail.com",
+	get_grade :function() {
+		return "A"
+	}
+}
+//To export object use module.export
+module.exports = student
+
+
+
+->Import syntax:
+var obj = require('PATH_TO_MODULE')
+->Dont use .js when importing
+
+_______________________________________________________
+fs Module:
+->File handling module
+->Two types of function
+1.Synchronous functions
+->
+2.Asynchrounus functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+BOM ->(Browser object model)
+->Manages the Browser functionality like screen,navgation,location and history
+->Object variable name is  window
+->Browser object model is superset of DOM
+Docs : https://developer.mozilla.org/en-US/docs/Web/API/Window
+_______________________________________________________________________
+
+DOM(Document Object Model):
+Browser creates a tree of objects for each html tag of a HTML document.
+->First Object of page is refered by document variable
+->Allows us to add or remove or modify any HTML element
+->Allows us to change CSS of any HTML element
+->Allows us add events
+DOCS: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+Example:
+document = {
+.....
+    children : [{html
+            ...
+                children : [{head},{body
+                        ...
+                        children: [{h1
+                                    ...
+                                        children:[]
+                                    ...
+                                },{p
+                                    ...
+                                        children:[]
+                                    ...
+                                }]
+                        ...
+                    }]
+            ...
+        }]
+.....
+}
+            HTML        BODY        H1
+document.children[0].children[1].children[0].innerText
+
+
+document.write() ->write() is the function property of document object to write on page
+
+
+
+
+Problem:
+Accessing element by traversing DOM tree is not feasible
+Solution:
+Access tag by ID,Class,Name attribute, Tag Name.And JS functions are already available to get tag by these methods
+document.getElementById(ID_ARG) -> returns the DOM of given ID
+document.getElementsByClass(CLASS_ARG) -> returns array of DOM's of given class
+document.getElementsByTagName(TAG_NAME) -> returns array of DOM's of given Tag
+
+Notes: Here select DOM using above function
+->Use DOM.value property with only input tag
+->Use DOM.innerText property with all othe HTML tag execpt input
+->For HTML data use DOM.innerHTML property
+-> DOM.attribute to change attribute of HTML tag
+e.g :
+<img id="image">
+DOM.src = "PATH_TO_IMAGE"
+->DOM.style.property can be used to change CSS
+DOM.style.backgroundColor = "red"
+DOM.style.borderColor="green"
+
+
+
+
+
+
+
+
+__________________________________________________________________
+
+
+
+

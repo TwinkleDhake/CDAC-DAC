@@ -1,0 +1,80 @@
+Async/Await:
+->"async" and "await" are keyword
+->"async" is used to make function asynchronous
+->function will return Promise
+async function add(a,b){ // using async to create asynchronous functions 
+    return a + b
+}
+
+Promise:
+->It is object
+->Return by async functions
+
+->await means waiting for that promise to complete
+->await must be inside async function only
+async function add(a,b){ // using async to create asynchronous functions 
+    return a + b
+}
+async function calc(){
+    var x= 0
+     x = await add(10,30); // you can write await only inside async functions
+    console.log(x)
+}
+
+calc()
+
+
+
+
+->.then resolves the promise but in chain
+-> we can write it anywhere
+add(10,30).then(function(data){
+    console.log(data)
+})
+->.catch will handle the rejected promise
+
+
+
+How to create promise instance manually?
+use Promise class
+_______________________________________________________
+NPM(Node package manager)
+->Its package manager to install the package
+Website : npmjs.com
+
+->NPM can be used by npm command
+Install a package:
+npm install package-name ->Install in current directory.This installs inside node_modules folder in current project
+npm install package-name -g -> Install globally.This install global node_modules folder that is with the nodejs  installation folder
+
+Uninstall a package:
+npm uninstall package-name
+
+Upgrade a package:
+npm  update package-name
+
+Initialize the project:(Setup project)
+npm init
+->It creates a package.json file in current directory and stores all configuration given in npm init command
+
+
+->After installation of library inside project it adds dependency property in the package.json(library name with version).It also creates package-lock.json which stores all package list with version
+_____________________________________________________________
+Express project setup:
+1.create folder
+2.Go inside folder
+3.Run npm init command
+4.Install  the express library
+5.Ceate your files and write code
+
+
+->Express is web framework
+->Provides lot of tools with it
+->Easy to implement
+->We can add middlewares
+
+
+
+
+
+

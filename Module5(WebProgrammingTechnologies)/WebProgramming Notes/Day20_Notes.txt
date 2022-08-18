@@ -1,0 +1,83 @@
+Props:
+->Props is used to pass data from one component to other(From parent to child)
+Data can be a state,function,any type of variable
+->Props are function arguments
+->Compnents recevies data from props
+->Props are read-only
+->props are passed from paren like HTML tag attributes
+
+Syntax:
+Parent Component:
+import Data from './Data';
+import {useState} from 'react';
+
+function Hello(){
+	var [name,setName] = useState("Sid")
+
+	return(
+		<div>
+			<Data d={name}/>
+		</div>
+		)
+}
+export default Hello;
+
+Child Component:
+function Data(props){ // here passing the props
+
+	return(
+			<div>
+				<h1>{props.d}</h1>
+			</div>
+		)
+
+}
+export default Data;
+
+_________________________________________________________________________________________________
+Lifting up the state:
+->Many components want the same state data to render but they dont have parent-child relationship
+->Then we should move the state to closest common parent/ancestor
+->Moving state to the closest common parent/ancestor maintains the single source of truth
+________________________________________________________________________________________________
+Keys:
+->Unique identifier for the items
+->With keys react can track which items have changed or added
+->It can accessed through props
+___________________________________________________________________________________________________
+Compositions:
+->Use one component inside othe component
+1.Containment
+->Parent do not have idea of their children
+->use the children props
+->Genric Component
+->You can pass any component to this genric component
+syntax: props.children
+2.Specilization
+->Special Component works for only special Component
+->Implement moveie application is specilization
+
+Inheritance:
+->Inheriting property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

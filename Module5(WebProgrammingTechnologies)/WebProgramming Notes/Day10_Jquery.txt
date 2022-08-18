@@ -1,0 +1,19 @@
+Jquery:
+->Library of JS
+->DOM Manipulation
+->AJAX
+->Animation
+
+How to use jquery library?
+Two Ways:
+1.use CDN Links(Directly use the URL)
+2.Download library and use external script
+___________________________________________________________________________________________
+->Write all code inside .ready handler
+//Here ready function executes handler when browser fires DOMContentLoaded event
+->Here $ is the function
+->We can pass id of any tag as argument to $ function with # as string like CSS
+$("#id")
+->We can pass class of any tag as argument to $ function with . as string like CSS
+$(".class")
+->All selectors of CSS can be used in jquery 
