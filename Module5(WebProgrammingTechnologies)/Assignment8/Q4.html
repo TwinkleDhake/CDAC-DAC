@@ -1,0 +1,87 @@
+/*4 Complete the assignment given in 4.png*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q4</title>
+	    <script type="text/javascript">
+
+		 var operation = []
+		
+	         function save_data() {
+			
+                var op_dom_arr = document.getElementsByClassName("op");
+                operation.push({
+                    srt1:document.getElementById("str1").value,
+                    srt2:document.getElementById("str2").value,
+                    str3:document.getElementById("str3").value,
+                    op : op_dom_arr[0].checked ? op_dom_arr[0].value : (op_dom_arr[1].value || op_dom_arr[2].value || op_dom_arr[3].value || op_dom_arr[4].value || op_dom_arr[5].value)
+                    })
+			      console.log(operation)
+
+                        
+                        /*for(i=0; i<operation.length; i++){ 
+                            if(operation[i].op == operation[0].op )
+                                {   var result = operation.srt1.search(operation.srt2);
+                                    document.getElementById("data").innerText = result; 
+                                }
+                        }*/
+                }                          
+
+           function display(){
+                
+                var str = "<table>";
+                for (var i=0; i<operation.length; i++){
+                    str = str + "<tr><td>"+operation[i].srt1+"</td><td>"+operation[i].srt2+"</td><td>"+operation[i].str3+"</td><td>"+operation[i].op+"</td></tr>";
+                }
+                str = str + "</table>"
+                document.getElementById('data').innerHTML = str;
+
+            /*
+                  function display(){
+                        var str1 = operation.srt1;
+                        var str2 = operation.srt2;
+                        var srt3 = operation.srt3;
+                        console.log(str3)
+                        for(i=0; i<operation.length; i++){ 
+                        if(operation[i].op == operation[0].op )
+                            {   var result = srt1.search(srt2);
+                                document.getElementById("data").innerText = result; 
+                            }
+                        }
+            }
+
+            
+                        case operation[i].op :
+                                document.getElementById("result").innerText = num1 - num2; 
+                                break;
+                        case op_dom_arr[2].value :
+                                document.getElementById("result").innerText = num1 * num2; 
+                                break;
+                        case op_dom_arr[3].value : 
+                                document.getElementById("result").innerText = num1 / num2; 
+                        break;*/
+                    
+                   } 
+              //  document.getElementById('data').innerHTML = str;
+            //}*/
+
+	</script>
+</head>
+<body>
+    <hr><br>
+	Enter String : <input type="text" id="str1" placeholder="Enter str1"><br><br>
+	Enter Substring: <input type="text" id="str2" placeholder="Enter str2"><br><br>
+	Replace with String: <input type="text" id="str3" placeholder="Enter str3"><br><br>
+	String Operation:<br> <input type="radio" class="op" name="op" value="search" checked> Search substring in main string<br>
+			          <input type="radio" class="op" name="op" value="upcase">To Upper Case<br>
+                      <input type="radio" class="op" name="op" value="locase">To Lower Case<br>
+                      <input type="radio" class="op" name="op" value="trime">Trime Spaces<br>
+                      <input type="radio" class="op" name="op" value="cont">Concatante<br>
+                      <input type="radio" class="op" name="op" value="replace">Replace<br> 
+	<button onclick="save_data()">Submit Query</button>
+    <button onclick="display()">Display Result</button>
+	<hr>
+    <div id="data"> </div>
+</body>
+</html>

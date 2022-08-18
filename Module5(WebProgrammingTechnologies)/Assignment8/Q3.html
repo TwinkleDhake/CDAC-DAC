@@ -1,0 +1,28 @@
+/*3 Write code to print table (Take Number and range from user)*/
+<html>
+    <head>
+        <title>Q3</title>
+        <script type ="text/javascript">
+            function table(){
+                var num1_dom = document.getElementById("num1");
+                var num1 = parseInt(num1_dom.value);
+                var range_dom = document.getElementById("range");
+                var range = parseInt(range_dom.value);
+
+                var str = "<ul>";
+                for(var i=1; i<=range ; i++)
+                {
+                    str = str + "<li>" +num1*i+"</li>";    
+                }
+                str = str + "</ul>";
+                document.getElementById("data").innerHTML = str;
+            }
+        </script>
+    </head>
+    <body><hr><br>
+        <input type="text" id="num1" placeholder="Enter number"><br><br>
+        <input type="text" id="range" placeholder="Enter range"><br><br>
+        <button onclick="table()">Crate Table</button><br><hr>
+        <br><span id="data"></span><hr>
+    </body>
+</html>

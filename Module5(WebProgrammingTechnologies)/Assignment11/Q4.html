@@ -1,0 +1,194 @@
+/* 4 Create a Fruit shop billing application 
+->Add fruit (id,name ,rate)
+->Display fruit
+Add fruit option will take data from prompt
+User can enter fruit name and quantity in input boxes.
+If fruit is in list find the rate and print the total price on screen */
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q4</title>
+    <style>
+
+        .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+                flex-direction: row;
+                gap:2rem
+            }
+
+        input {
+                height: 2rem;
+                width: 20rem;
+                font-size: 1rem;
+                margin: 0.5rem;
+                border-radius: 8px;
+                border: 1px solid rgba(128, 128, 128, 0.589);
+                padding-left: 10px;
+                margin: 5px;
+                
+            }
+
+         body {
+                background-color: rgb(201, 255, 101);
+                /* background-color: rgb(94, 141, 8); */
+            }
+
+        .formBox {
+                background-color: rgb(245, 245, 245);
+                padding: 3rem;
+                text-align: center;
+            }
+
+        button{
+                width: 8rem;
+                font-size: 1rem;
+                height: 2rem;
+                border: 0px;
+                background-color: rgb(150, 201, 48);
+               
+            }
+        
+            table,td,th{
+                border: 1px solid grey;
+                border-collapse: collapse;
+            }
+            table{
+                width: 25rem;
+            }
+            td,th{
+                height: 2rem;
+            }
+            tr:hover{
+                background-color: rgb(245, 245, 245);
+            }
+
+        </style>
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<script>
+
+        var fruit_list = [] ;
+        
+            $(document).ready( function(){
+                $("#form").on("submit",function(e){
+                    e.preventDefault()
+                    var item = {
+                        id : $("#id").val(),
+                        name : $("#name").val(),
+                        rate : $("#rate").val()
+                    }
+                    fruit_list.push(item)
+                    display(item);
+                    reset();
+                    $("tbody tr:even").css("background-color","rgb(128, 180, 30)")
+                })
+
+                $("th").css("background-color","rgb(94, 141, 8)")
+            })
+
+            //display appended table data row by row 
+            function display(item){    
+                $("#tableBody").append(`
+                <tr>
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.rate}</td>
+                </tr>`
+                );
+            }
+
+            //reset the input fields after submit 
+            function reset(){
+                 $(".inp").val("");
+            }
+
+
+            //button hover event
+            $("button").hover(
+                    function(){
+                        $(this).css("background-color","rgb(150, 201, 48)")
+                    },
+                    function(){
+                        $(this).css("background-color","yellowgreen")
+                    })
+                                
+            
+            $(document).ready(function(){
+                $("#Buy_fruit").click(function () {
+            
+                for(var i=0;i<fruit_list.length;i++)
+                {
+                	var name_find=$("#name1").val();
+                    if(fruit_list[i].name ==name_find )
+                    {
+                        //console.log(fruit_list[i].name)
+                         var rate =fruit_list[i].rate;
+                        var quntity=parseInt($("#quntity").val());
+                        //console.log(quntity);
+                        $("#fruit_data2").text("Total Rate is : "+rate*quntity);
+                    }
+                    else
+                    {
+                          $("#fruit_data2").text("Fruit is not found ")
+                    }
+                }
+            })
+           })
+                      
+    </script>
+	
+</head>
+
+<body>
+<hr>
+    <div class="container">
+        <div class="formBox">
+
+            <form id="form">
+                    <input type="text" calss="inp" id="id" placeholder="Enter ID"><br>
+                    <input type="text" calss="inp" id="name" placeholder="Enter Name" required><br>
+                    <input type="text" calss="inp" id="rate" placeholder="Enter Rate"><br>
+                <button>Add Fruit Detail</button>
+                <!-- <button id="display_fruit_detail">Display Fruit Detail</button><br><br> -->
+                <hr>
+            </form>
+        
+            <table>
+                    <thead>
+                           <tr>
+                               <th>ID</th>
+                               <th>Name</th>
+                               <th>Rate</th>
+                           </tr>
+                     </thead>
+                     <tbody id="tableBody">
+
+                      </tbody>
+            </table>
+            <hr>       
+        
+        </div>  
+        
+        
+        <div class="formBox">
+            <span id="fruit_data"></span>
+            <input type="text" id="name1" placeholder="Enter name" ><br>
+            <input type="text" id="quntity"  placeholder="Enter quntity"  ><br>
+            <button id="Buy_fruit">Buy Fruit</button><br><hr>
+
+                Total Price:
+                <span id="fruit_data2"></span>
+            </form>
+         <hr>
+        </div>
+    </div>
+</body>
+</html>

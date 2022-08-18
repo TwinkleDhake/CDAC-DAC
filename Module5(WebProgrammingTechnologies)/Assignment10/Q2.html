@@ -1,0 +1,51 @@
+/*2 Write code to print table (Take Number and range from user)*/
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Q2</title>
+        <script src="jquery.js"></script>
+        <script>
+           /* function table(){
+                var num1_dom = document.getElementById("num1");
+                var num1 = parseInt(num1_dom.value);
+                var range_dom = document.getElementById("range");
+                var range = parseInt(range_dom.value);
+
+                var str = "<ul>";
+                for(var i=1; i<=range ; i++)
+                {
+                    str = str + "<li>" +num1*i+"</li>";    
+                }
+                str = str + "</ul>";
+                document.getElementById("data").innerHTML = str;
+            }*/
+
+            $(document).ready(function () {
+                $("#table").click(function (){
+                    var num1 = parseInt($("#num1").val());
+                    var range = parseInt($("#range").val());
+
+                    var str = "<ul>";
+                    for(var i=1; i<=range ; i++)
+                        {
+                            str = str + "<li>" +num1*i+"</li>";    
+                        }
+                        str = str + "</ul>";
+                        $("#data").html(str);
+            
+                })
+
+            })
+        </script>
+    </head>
+    <body><hr><br>
+        <input type="text" id="num1" placeholder="Enter number"><br><br>
+        <input type="text" id="range" placeholder="Enter range"><br><br>
+        <button id="table">Crate Table</button><br><hr>
+        <br><span id="data"></span><hr>
+    </body>
+</html>

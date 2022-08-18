@@ -1,0 +1,40 @@
+//4 Write a code to accept name of fruit from user and show in ordered list
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4_fruit</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+    <script>
+        var fruit = []
+        $(document).ready(function () {
+                  
+            $("#submit").click(function () {
+                var name = $("#name").val() 
+                fruit.push({
+                   name:name
+                })
+                var str = "<ol>"
+                
+                for( var item of fruit){
+                    str += "<li>"+item.name+"</li>"
+                }
+                str+="</ol>"
+
+                $("#data").html(str) // function for innerHTM
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter name"> <br>
+    <button id="submit">Submit</button>
+    <div id="data"></div>
+</body>
+</html>

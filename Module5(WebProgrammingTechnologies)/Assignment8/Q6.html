@@ -1,0 +1,55 @@
+/*6 Implement Validation on all input tags of Question 1
+->All fields are required
+->One radio button must be selected
+->Phone number must be of 10 digit
+->name must have at least 5 characters
+*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q6</title>
+	<script type="text/javascript">
+
+		var students = []
+		
+		function save_data() {
+			
+			var gender_dom_arr = document.getElementsByClassName("gender")
+			students.push({
+				name:document.getElementById("name").value,
+				email:document.getElementById("email").value,
+				phone:document.getElementById("phone").value,
+				gender : gender_dom_arr[0].checked ? gender_dom_arr[0].value : gender_dom_arr[1].value
+			})
+			console.log(students)
+        }
+
+        function display_student(){
+            //document.write("Student List");
+            var str = "<table border=1>";
+            for (var i=0; i<students.length; i++){
+                str = str + "<tr><td>"+students[i].name+"</td><td>"+students[i].email+"</td><td>"+students[i].phone+"</td><td>"+students[i].gender+"</td></tr>";
+            }
+            str = str + "</table>"
+            //document.write(str);
+            document.getElementById('data').innerHTML = str;
+
+        }
+
+	</script>
+</head>
+<body>
+    <hr><br>
+	<input type="text" id="name" size="5" placeholder="Enter name" required><br><br>
+	<input type="email" id="email" placeholder="Enter email" required><br><br>
+	<input type="phone" id="phone" size="10" placeholder="Enter phone No." required><br><br>
+	Gender: <input type="radio" class="gender" name="gender" value="male" checked>Male
+			<input type="radio" class="gender" name="gender" value="female">Female<br><br>
+	<button onclick="save_data()">Save Student</button>
+    <button onclick="display_student()">Display Student</button>
+	<hr>
+    <div id="data"> </div>
+
+</body>
+</html>

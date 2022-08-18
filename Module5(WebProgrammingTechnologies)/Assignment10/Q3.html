@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3_Image</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $(".option").change(function(){
+                var d = $("#str1").val();
+
+                   var d1 = $("#str2").val();
+
+                    var d2 = $("#str3").val();
+
+                var opt = $(".option:checked").val();
+
+                switch(opt){
+                    case "1" :  var d1 = $("#str2").val();
+                               var result = d.includes(d1);
+                               $("#data").html(result);
+                               break;
+
+                    case "2" :$("#data").html(d.toUpperCase());
+                               break;
+
+                    case "3" :$("#data").html(d.toLowerCase());
+                                break;
+                               
+                    
+
+                    case "4": var result = d.trim();
+                              $("#data").html(result);
+                              break;
+
+
+
+                    case "5": var result =d.concat(d2.toString()); // concat str1 str2
+                             $("#data").html(result);
+                             break;
+
+
+
+                    case "6": var d1 = $("#str2").val();
+                            $("#data").html(d.replaceAll($("#str1").val(),$("#str3").val()));
+                              break;     
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+   Enter String: <input type="text" name="str1" id="str1" ><br>
+   Enter sub string:<input type="text" name="str2" id="str2"><br>
+   Replace With String:<input type="text" name="str3" id="str3"><br>
+
+    <input type="radio" name="option" class="option" value="1">Search substring in main string
+    <input type="radio" name="option" class="option" value="2">To Upper case
+     <input type="radio" name="option" class="option" value="3">To Lower case
+      <input type="radio" name="option" class="option" value="4">Trim Spaces
+       <input type="radio" name="option" class="option" value="5">Concat
+        <input type="radio" name="option" class="option" value="6">Replace
+
+    <p id="data"></p>
+</body>
+</html>

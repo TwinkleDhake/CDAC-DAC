@@ -1,0 +1,87 @@
+/*5 Complete the Student List code(Complete display functionality)*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+    <!-- Using jquery from downloaded file -->
+    <script src="jquery.js"></script>
+    
+	<script>
+
+		var students = []
+		
+	/*	function save_data() {
+			
+			var gender_dom_arr = document.getElementsByClassName("gender")
+			students.push({
+				name:document.getElementById("name").value,
+				email:document.getElementById("email").value,
+				phone:document.getElementById("phone").value,
+				gender : gender_dom_arr[0].checked ? gender_dom_arr[0].value : gender_dom_arr[1].value
+			})
+			console.log(students)
+        }
+
+        function display_student(){
+            //document.write("Student List");
+            var str = "<table border=1>";
+            for (var i=0; i<students.length; i++){
+                str = str + "<tr><td>"+students[i].name+"</td><td>"+students[i].email+"</td><td>"+students[i].phone+"</td><td>"+students[i].gender+"</td></tr>";
+            }
+            str = str + "</table>"
+            //document.write(str);
+            document.getElementById('data').innerHTML = str;
+
+        }*/
+
+        $(document).ready(function(){
+            $("#save_data").click(function(){
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var phone = $("#phone").val();
+                    $(".gender").change(function(){
+                         var gender = $(".gender:checked").val();
+                         
+                students.push({
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    gender: gender,
+                    
+                })
+                console.log(name,email,phone,gender);
+            })
+            
+            })
+        })
+
+        $(document).ready(function(){
+            $("#display_student").click(function(){
+                var str = "<table border=1>"
+                    for(var i of students){
+                        str += "<tr><td>"+i.name+"</td><td>"+i.email+"</td><td>"+i.phone+"</td><td>"+i.gender+"</td></tr>"
+                    }
+                    str += "</table>"
+                    $("#data").html(str);
+                    console.log("#data");
+            })
+        })
+	</script>
+</head>
+<body>
+    <hr><br>
+	<input type="text" id="name" placeholder="Enter name"><br>
+	<input type="email" id="email" placeholder="Enter email" required><br>
+	<input type="phone" id="phone" placeholder="Enter phone No."><br>
+     Gender: <input type="radio" class="gender" name="gender" value="male">Male
+			<input type="radio" class="gender" name="gender" value="female">Female<br> 
+	<button id="save_data">Save Student</button>
+    <button id="display_student">Display Student</button>
+	<hr>
+    <div id="data"> </div>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*5 Write a code to accept name of fruit from user and show in ordered list*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q5</title>
+	<script type="text/javascript">
+        var fruit_list = [] 
+
+            function add_fruit_detail(){
+                
+                fruit_list.push({
+                    id : document.getElementById("id").value,
+                    name : document.getElementById("name").value,
+                    rate : document.getElementById("rate").value
+                })
+                console.log(fruit_list)
+            }
+
+
+            function display_fruit_detail(){
+               // document.write("Fruit Shop");
+                var str = "<ol type='1'>";
+                for (var i=0;i< fruit_list.length;i++){
+                    str = str + "<li>"+fruit_list[i].id+"</li><li>"+fruit_list[i].name+"</li><li>"+fruit_list[i].rate+"</li>"
+                }
+                str = str + "</ol>"
+                document.getElementById("data").innerHTML = str;
+
+            }
+	</script>
+	
+</head>
+<body>
+<hr><br>
+Enter Fruit Id: <input type="text" id="id" placeholder="Enter id"><br><br>
+Enter Fruit Name: <input type="text" id="name" placeholder="Enter name"><br><br>
+Enter Fruit Rate: <input type="text" id="rate" placeholder="Enter rate"><br><br>
+<button onclick="add_fruit_detail()">Add Fruit Detail</button>
+<button onclick="display_fruit_detail()">Display Fruit Detail</button>
+<hr>
+<div id="data"></div>
+
+</body>
+</html>

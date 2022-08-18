@@ -1,0 +1,82 @@
+/1 Complete the fruit List code(Complete display functionality)/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q1_JS FORM DOM_fruit</title>
+	<script type="text/javascript">
+
+		var fruit = []
+		
+		function save_data() {
+			
+		
+			fruit.push({
+				id:document.getElementById("id").value,
+				name:document.getElementById("name").value,
+				rate:parseInt(document.getElementById("rate").value),
+		
+			})
+			console.log(fruit)
+        }
+
+        function display_fruit(){
+            //document.write("Student List");
+            var str = "<table border=1>";
+            for (var i=0; i<fruit.length; i++){
+
+                str = str + "<tr><td>"+fruit[i].id+"</td><td>"+fruit[i].name+"</td><td>"+fruit[i].rate+"</td></tr>";
+            }
+            str = str + "</table>"
+            //document.write(str);
+            document.getElementById('data').innerHTML = str;
+
+        }
+         
+          function total()
+            {
+                for(var i=0;i<fruit.length;i++)
+                {
+                	var name_find=document.getElementById("name1").value
+                    if(fruit[i].name ==name_find )
+                    {
+                        console.log(fruit[i].name)
+                         var rate =fruit[i].rate;
+                        var quntity=parseInt(document.getElementById("quntity").value);
+                        console.log(quntity);
+                        document.getElementById("total").innerText = "Total Rate is : "+rate*quntity;
+                    }
+                    else
+                    {
+                          document.getElementById("total").innerText = "Fruit is not found "
+                    }
+                }
+            }
+
+
+       
+
+	</script>
+</head>
+<body>
+    <hr><br>
+	
+	<input type="text" id="id" placeholder="Enter id" ><br>
+	<input type="text" id="name"  placeholder="Enter name"  ><br>
+	<input type="text" id="rate" placeholder="Enter rate"><br>
+
+	<button type="submit" onclick="save_data()">Save fruit</button>
+    <button onclick="display_fruit()">Display fruit</button>
+	<hr>
+	 <div id="data"> </div>
+    
+    <input type="text" id="name1" placeholder="Enter name" ><br>
+	<input type="text" id="quntity"  placeholder="Enter quntity"  ><br>
+	<button onclick="total()">Total Rate</button>
+
+    <div id="total"> </div>
+
+
+
+</body>
+</html>

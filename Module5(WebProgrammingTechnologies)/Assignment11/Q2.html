@@ -1,0 +1,52 @@
+/* 2 Change above to show name in table*/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        var emp_lst = []
+        $(document).ready(function(){
+            $("#add_data").on('click',function(){
+                var n = $("input[name=name]").val()
+                //$("<li>"+n+"</li>").appendTo("#list");
+                $("#list").append("<li>"+n+"</li>");
+                // $("#list").prepend("<li>"+n+"</li>");
+                $("#tbody").append("<tr><td>"+n+"</td></tr>");
+            })
+
+        })
+    </script>
+</head>
+<body><br><br>
+    <input type="text" name="name"><br><br>
+    <button id="add_data">Add Name</button><br>
+    <hr>
+    <span> Data in List</span>
+    <ol id="list" type="A"></ol>
+    <hr>
+    <span> Data in Table</span>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            
+            </tbody>
+        </table>
+    </div>
+    <hr>                    
+                    
+    <!-- <button id="store">Store</button>
+    <br>
+    <button id="get_data">Get Data</button>
+    <span id="show_data"></span>  -->
+</body>
+</html>

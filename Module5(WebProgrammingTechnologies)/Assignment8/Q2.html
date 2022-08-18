@@ -1,0 +1,45 @@
+/*2 Write a calculator code with ADD, subtract,divide,Multiply and modulas button*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q2</title>
+	<script type="text/javascript">
+		
+        function add_data(){
+                var num1_dom = document.getElementById("num1");
+                var num1 = parseInt(num1_dom.value);
+                var num2_dom = document.getElementById("num2");
+                var num2 = parseInt(num2_dom.value);
+                var ch_dom = document.getElementById("ch");
+                var ch = parseInt(ch_dom.value);
+                
+                switch(ch){
+                    case 1 : 
+                            document.getElementById("result").innerText = num1 + num2 ; 
+                            break;
+                    case 2 :
+                            document.getElementById("result").innerText = num1 - num2; 
+                            break;
+                    case 3 :
+                            document.getElementById("result").innerText = num1 * num2; 
+                            break;
+                    case 4 : 
+                            document.getElementById("result").innerText = num1 / num2; 
+                    break;
+                
+                }   
+		}
+	</script>
+</head>
+<body>
+    <hr><br>
+    <input type="text" id="num1" placeholder="Enter num1"><br><br>
+	<input type="text" id="num2" placeholder="Enter num2"><br><br>
+    <span>Calculator Operation are:<br>1.Addition <br>2.Subrtaction<br> 3.Multiplication<br> 4.Division</span><br><br>
+    <input type="text" id="ch" placeholder="Enter Choice:"><br><br>
+    <button onclick="add_data()">Add_data</button><br><br>
+    Result is: <span id="result"></span>
+
+</body>
+</html>

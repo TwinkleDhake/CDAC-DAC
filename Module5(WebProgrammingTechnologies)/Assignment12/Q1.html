@@ -1,0 +1,89 @@
+/* 2 Implement AJAX code for given url(Use my code)
+GET Request , https://emojihub.herokuapp.com/api/random
+GET Request, https://emojihub.herokuapp.com/api/all*/
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script>
+		/*	1.create object
+			2.OPen request to URL
+			3.Register function on onreadystatechange
+			4.send request
+			*/
+
+			var lst_emoji = []
+
+		function fetch_data(){
+			var req = new XMLHttpRequest()
+			req.open("GET","https://emojihub.herokuapp.com/api/random",true);
+			req.onreadystatechange = function(){
+				if(req.readyState == 4 && req.status == 200){
+						var data = JSON.parse(this.responseText);
+						lst_emoji.push(data)
+						var str = "<table>"
+						for(var i =0 ;i< lst_emoji.length ; i++){
+							str += "<tr><td>"+lst_emoji[i].name +"</td><td>" + lst_emoji[i].htmlCode[0]+"</td></tr>";
+						}
+
+						document.getElementById("data").innerHTML = str;
+					}
+			}
+			req.send()
+		}
+
+
+
+
+		var lst_emoji2 = []
+
+		function fetch_data2(){
+			var req = new XMLHttpRequest()
+			req.open("GET","https://emojihub.herokuapp.com/api/all",true);
+			req.onreadystatechange = function(){
+				if(req.readyState == 4 && req.status == 200){
+						var data2 = JSON.parse(this.responseText);
+						lst_emoji2.push(data2)
+						var str = "<table>"
+						for(var i =0 ;i< lst_emoji2.length ; i++){
+							str += "<tr><td>"+lst_emoji2[i].name +"</td><td>" + lst_emoji2[i].htmlCode[1]+"</td></tr>";
+						}
+
+						document.getElementById("data2").innerHTML = str;
+					}
+			}
+			req.send()
+		}
+            // function fetch_data2(){
+			// 	var req2 = new XMLHttpRequest()	
+			// 	req2.open("GET","https://emojihub.herokuapp.com/api/all",true);
+			// 	req2.onreadystatechange = function(){
+			// 		if(req2.readyState == 4 && req2.status == 200){
+			// 			var d2 = JSON.parse(this.responseText);
+			// 			$("#data2").append("<tr><td>"+d2.type+"</td><td>"+d2.text+"<tr><td>");
+			// 			console.log(this.responseText)
+			// 		}
+			// 	}
+			// 	req2.send();
+
+			// }
+			// $(document).ready(function(){
+			// 	$("#send2").click(fetch_data2);
+			// })
+
+	</script>
+</head>
+<body><br><hr>
+	<button onclick="fetch_data()">Fetch Data</button>
+	<table id="data"></table>
+
+    <hr><br>
+	<button onclick="fetch_data2()">Fetch Data2</button>
+	<table id="data2"></table>
+</body>
+</html>

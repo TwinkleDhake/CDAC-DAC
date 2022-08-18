@@ -1,0 +1,63 @@
+// 1 Write a calculator code with ADD, subtract,divide,Multiply and modulas button
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q1</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script>
+
+    $(document).ready(function () {
+        $('#add').on('click', function () {
+            var n1 = parseInt($('#num1').val());
+            var n2 = parseInt($('#num2').val());
+            var r = n1 + n2;
+            $("#data").html(r);
+            return false;
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('#sub').on('click', function () {
+            var n1 = parseInt($('#num1').val());
+            var n2 = parseInt($('#num2').val());
+            var r = n1 - n2;
+            $("#data").html(r);
+            return false;
+        });
+    });
+
+    $(document).ready(function () {
+        $('#mul').on('click', function () {
+            var n1 = parseInt($('#num1').val());
+            var n2 = parseInt($('#num2').val());
+            var r = n1 * n2;
+            $("#data").html(r);
+            
+        });
+
+    });
+
+    $(document).ready(function () {
+        $('#div').on('click', function () {
+            var n1 = parseInt($('#num1').val());
+            var n2 = parseInt($('#num2').val());
+            var r = n1 / n2;
+            $("#data").html(r);
+            
+        });
+
+    });
+	</script>
+</head>
+<body>
+	<input type="text" name="num1" id="num1" placeholder="Enter 1st number" ><br>
+
+	<input type="text" name="num2" id="num2" placeholder="Enter 2nd number"><br>
+    <button id="add">addition</button>
+    <button id="sub">subtraction</button>
+    <button id="mul">multiplication</button>
+    <button id="div">division</button>
+    <div id="data"></div>
+</body>
+</html>

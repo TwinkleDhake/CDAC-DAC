@@ -1,0 +1,36 @@
+/* Q3-5 Write a code to check the given string is palindrome or not. (abba)*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q3-5</title>
+	<script type="text/javascript">
+		document.write("<hr>");
+
+        var str = prompt("Enter String:");
+        document.write("String is " + str )        
+        document.write("<br>");
+        
+        var i = 0;
+        var len = str.length -1;
+                
+        function palindrome(){
+            while(len > i)
+            { .02
+                if(str[i++] != str[len--])
+                {
+                    document.write("String " +str+ " is not palindrome!! ");  
+                }
+                else{
+                    document.write("String " +str+ " is palindrome!! ");  
+                }
+
+            }
+            }
+	</script>
+</head>
+<body>
+    <hr>
+    <button onclick="palindrome()">Palindrome!!</button><br>
+</body>
+</html>
