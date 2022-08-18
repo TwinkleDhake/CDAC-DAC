@@ -1,0 +1,10 @@
+1.Perform following class details.html file 
+->Expand the size of first column to 6 and table column to 6 for large screen
+->Expand the size of first and second column to 12  for small screen
+->For large screen first column 5 and second column 7
+->for medium screen first column 6 and second column 6
+___________________________________________________________
+->Create new row
+->create card
+->Show product image,Name,price,and buy button
+___________________________________________________________
