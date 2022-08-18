@@ -1,0 +1,44 @@
+/Q6.Write a code to take 5 stduent and show student list in table/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q6</title>
+	<script type="text/javascript">
+		
+        var student = []; 
+
+		function add_student(){
+			for(var i=0;i <=4;i++){ 
+				var name = prompt("Enter student name "); 
+				student.push(name); 
+			}
+		}
+
+		function display_student() {
+			var str = student.join("<br>"); 
+			document.write(str)
+		}
+
+        function display_stud_table(){
+			var str = "<table>"
+			for (var i = 0; i < student.length; i++) {
+					
+                    str = str + "<tr><td>"+student[i]+"</td></tr>";
+                
+			}
+			str = str + "</table>"
+			document.write(str);
+		}
+
+	</script>
+</head>
+<body>
+
+    <hr>
+    <button onclick="add_student()">Add Student</button><br>
+    <button onclick="display_student()">Show Student</button><br>
+	<button onclick="display_stud_table()">Show Table</button><br>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/*Q8. Write Javascript function to find the sum and average of all passed parameters.pass 3 parameters*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q8Assi17_SumNAvg</title>
+	<script type="text/javascript">
+		
+        var par = []; 
+
+		function enter(){
+			for(var i=0;i<3;i++){ 
+				var num = prompt("Enter num: "); 
+				par.push(num); 
+			}
+		}
+
+        function display_table(){
+			var str = "<table>"
+			for (var i = 0; i < 3; i++) {
+					 str = str + "<tr><td>"+par[i]+"</td></tr>";    
+			}
+			str = str + "</table>"
+			document.write(str);
+		}
+
+        function sum_avg(){
+            var sum =0;
+			var avg =0;
+
+            for (i = 0; i < 3; i++) {
+					enter();
+					 sum = sum + par[i];    
+			}
+			document.write("<br> Sum of num: "+ sum);
+            avg = sum / 3;
+            document.write("<br> Avg of num: "+avg);
+        }
+
+
+	</script>
+</head>
+<body>
+
+    <hr>
+    <button onclick="enter()">Add num</button><br>
+	<button onclick="display_table()">Show Table</button><br>
+    <button onclick="sum_avg()">Sum and Avg</button><br>
+    <hr>
+</body>
+</html>

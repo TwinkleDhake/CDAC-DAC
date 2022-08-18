@@ -1,0 +1,36 @@
+/*Q10. Write a program to display Fibonacci series*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q10Assi17_Fibonacci</title>
+	<script type="text/javascript">
+		document.write("<hr>");
+
+        var n = parseInt(prompt("Enter number"));
+        document.write("num is " + n )        
+        document.write("<br>");
+        
+        var f1 = 0;
+        var f2 = 1;
+        var f3;        
+        function sum(){
+            document.write("<br> "+f1+" "+f2+" "); 
+            if(n==0){
+                document.write("<br>" +f1);
+            }
+                for(var i=1; i<n; i++){  
+                    f3 = f1 + f2;
+                    f1 = f2;
+                    f2 = f3;
+                    document.write(" "+f3 );
+                }
+             
+            }
+	</script>
+</head>
+<body>
+    <hr>
+    <button onclick="sum()">sum</button><br>
+</body>
+</html>

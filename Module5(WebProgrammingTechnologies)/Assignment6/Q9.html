@@ -1,0 +1,33 @@
+/*Q9. Write a program to find the sum of squares of even numbers upto N (accept from user). Make use of function*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q9Assi17_sum_sqEven</title>
+	<script type="text/javascript">
+		document.write("<hr>");
+
+        var n = parseInt(prompt("Enter number"));
+        document.write("num is " + n )        
+        document.write("<br>");
+        
+        var su = 0;
+        var sq = 0;        
+        function sum(){
+            for(var i=1; i<n; i++){
+            if(i%2==0)
+            {
+                sq = i * i;
+                su = su + sq;
+            }
+            }
+        document.write("<br> sum of squares of even numbers upto "+n+" is "+su ); 
+        }
+
+	</script>
+</head>
+<body>
+    <hr>
+    <button onclick="sum()">sum</button><br>
+</body>
+</html>

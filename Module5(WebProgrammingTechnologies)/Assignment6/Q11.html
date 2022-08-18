@@ -1,0 +1,39 @@
+/*Q11. Create a web page to calculate the compound Interest.
+p = Principal,
+r = Rate of Interest,
+n = period in years
+The values used in the example in the following figure are as follows:
+P = 1000, n = 1, r = 10
+*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q11Assi17_CompoundInt</title>
+	<script type="text/javascript">
+		document.write("<hr>");
+        
+        var p = parseInt(prompt("Enter Principal"));
+        var r = parseInt(prompt("Enter Rate of Interest"));
+        var n = parseInt(prompt("Enter period in years"));
+        document.write("Principal is " + p )
+        document.write("<br>Rate of Interest is " + r )
+        document.write("<br>period in years is " + n )        
+        document.write("<br>");
+        
+        var p = 1000;
+        var n = 1;
+        var r =10;        
+        function ci(){
+           
+            var result = p * (Math.pow((1 + r / 100), n));
+            document.write("<br>Compound Interest is " + result)
+            }
+
+	</script>
+</head>
+<body>
+    <hr>
+    <button onclick="ci()">Compound Interest</button><br>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/*Q7. Write a function pow(x,y) that calculates x power y. Do not use the Math predefined objet*/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q7Assi17_basepowerFunc</title>
+	<script type="text/javascript">
+		document.write("<hr>");
+
+        var base = parseInt(prompt("Enter base number"));
+		var power = parseInt(prompt("Enter power number"));
+        document.write("base num is " + base )        
+		document.write("<br> power num is " + power )
+        document.write("<br>");
+        
+        var result = 1;
+        
+        function pow_num(){
+            while(power != 0){
+                result = result * base;
+                power--;
+            }
+        document.write("<br> power of "+base+" num is " + result ) 
+        }
+
+	</script>
+</head>
+<body>
+    <hr>
+    <button onclick="pow_num()">Power of num</button><br>
+</body>
+</html>

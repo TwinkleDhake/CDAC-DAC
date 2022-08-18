@@ -1,0 +1,94 @@
+/Q5.Implement all above question using function and onclick event/
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Q5</title>
+	<script type="text/javascript">
+
+
+        document.write("<hr>");
+
+		function add_number(){
+			var a = parseInt(prompt("Enter number"))
+			var b = parseInt(prompt("Enter number"))
+			document.write("First num is " + a )
+            document.write("<br> Second num is " + b )
+            document.write("<br> Result is " + (a + b))
+            document.write("<hr>");
+		}
+        
+        function table_num(){
+            var a = parseInt(prompt("Enter number: "));
+            var b = parseInt(prompt("Enter iterations: "));
+            document.write("<br>Number is: " + a )
+            document.write("<br>Iterations are: " + b )
+            document.write("<br>");
+            for(var i=1;i<=b;i++)
+            {
+            document.write("a*i: " +a+ "*" +i+ " : " +(a*i));
+            document.write("<br>");
+            }
+        }
+
+        function calculator(){
+            document.write("<hr>");
+            var a = parseInt(prompt("Enter first number"));
+            var b = parseInt(prompt("Enter second number"));
+            var ch =  parseInt(prompt("1.Addition 2.Subrtaction 3.Multiplication 4.Division Enter Choice:"));
+            
+            document.write("Calculator Operation are:");
+            document.write("<br> 1. Addition");
+            document.write("<br> 2.Subrtaction");
+            document.write("<br> 3.Multiplication");
+            document.write("<br> 4.Division");
+        
+            
+            document.write("<br> First num is " + a )
+            document.write("<br> Second num is " + b )
+            document.write("<br> You Entered Choice is " + ch )
+            document.write("<hr>");
+            
+            switch(ch){
+                case 1 :  document.write("<br> Result is " + (a + b));
+                        break;
+                case 2 :  document.write("<br> Result is " + (a - b));
+                        break;
+                case 3 :  document.write("<br> Result is " + (a * b));
+                        break;
+                case 4 :  document.write("<br> Result is " + (a / b));
+                break;
+                default :  document.write("<br> Enter Valid Choise!");
+                
+            }
+        }
+
+            function add_digit(){
+                var num1 = parseInt(prompt("Enter the number "));
+                var res = 0; 
+                var sum = 0;
+                while(num1 != "0")
+                {
+                
+                res= num1 % 10;
+                sum = sum + res;
+                num1= parseInt(num1/10);
+                }
+
+                document.write("Sum of digits of number is :"+sum);  
+                alert("Sum of digits of number is :"+sum)   ;  
+            }
+        
+        
+	</script>
+</head>
+<body>
+    <hr>
+	<button onclick="add_number()">Add</button><br><br>
+    <button onclick="table_num()">Table</button><br><br>
+    <button onclick="calculator()">Calculator</button><br><br>
+    <button onclick="add_digit()">Add_Digit</button><br><br>
+    <hr>
+
+</body>
+</html>
